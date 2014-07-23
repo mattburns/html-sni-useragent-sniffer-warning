@@ -77,22 +77,21 @@ if (/Windows\sNT\s5/.exec(navigator.userAgent)) {
 	if (/MSIE\s[678]+/.exec(navigator.userAgent)) {	
 		// it's MSIE
 		browserSNICompatibility = 0;
-		}
 	}
+}
 // Android 2.0, 2.1, 2.2
-if (/Android\s2\.[012]+/) { browserSNICompatibility = 0; }
+if (/Android\s2\.[012]+/.exec(navigator.userAgent)) { browserSNICompatibility = 0; }
 
 // uncomment the line below for testing:
-browserSNICompatibility = 0;
+// browserSNICompatibility = 0;
 
-if(document.body == null){ 
+if (document.body == null){ 
 	// this script is probably not installed correctly
-	}
-else if (! browserSNICompatibility){
+} else if (! browserSNICompatibility) {
 	//	document.body.appendChild(element); 
-    document.getElementById('light').style.display='block';
+	document.getElementById('light').style.display='block';
 	document.getElementById('fade').style.display='block';
-	}
+}
 //-->
 </script>
 
